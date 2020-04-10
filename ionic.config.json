@@ -1,0 +1,7 @@
+{
+  "name": "issolab",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
