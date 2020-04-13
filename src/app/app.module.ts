@@ -51,17 +51,17 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { TwitterConnect } from '@ionic-native/twitter-connect/ngx';
 // CONFIG CREDENTIALES FIREBASE
-// export const firebaseConfig = {
-//   apiKey: "AIzaSyB0Wo189-lfv2KcC6tN0CWp1HnZXFGzSVM",
-//   authDomain: "issolab.firebaseapp.com",
-//   databaseURL: "https://issolab.firebaseio.com",
-//   projectId: "issolab",
-//   storageBucket: "issolab.appspot.com",
-//   messagingSenderId: "135656993579",
-//   appId: "1:135656993579:web:f489c3a9699e605df78b6e",
-//   measurementId: "G-LR6VYCDND3"
-// };
-// firebase.initializeApp(firebaseConfig);
+export const firebaseConfig = {
+  apiKey: "AIzaSyB0Wo189-lfv2KcC6tN0CWp1HnZXFGzSVM",
+  authDomain: "issolab.firebaseapp.com",
+  databaseURL: "https://issolab.firebaseio.com",
+  projectId: "issolab",
+  storageBucket: "issolab.appspot.com",
+  messagingSenderId: "135656993579",
+  appId: "1:135656993579:web:f489c3a9699e605df78b6e",
+  measurementId: "G-LR6VYCDND3"
+};
+firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "135656993579",
+    "firebase_url": "https://issolab.firebaseio.com",
+    "project_id": "issolab",
+    "storage_bucket": "issolab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135656993579:android:5221ea1197ce7f6ff78b6e",
+        "android_client_info": {
+          "package_name": "com.aputek.issolabapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135656993579-7bum3ohrfel7tcoaf1inalakeruobqd6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aputek.issolabapp",
+            "certificate_hash": "68d7e01e5abcf301095e75e8d3c14f28750e63ec"
+          }
+        },
+        {
+          "client_id": "135656993579-m2ikk0flsunna8smei7ci18knpsq22u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaZhQ9EbKjj576C3QxfbZIoM0pOVaDnpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135656993579-m2ikk0flsunna8smei7ci18knpsq22u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

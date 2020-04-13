@@ -92,9 +92,9 @@ export class LoginPage implements OnInit {
       });
   }
 
-  loginGoogle(): void {
+  loginGooglee(): void {
     this.googlePlus.login({
-      'webClientId': '720022134057-e9d2orv93p0p7i7q1dan414vru4mbde5.apps.googleusercontent.com',
+      'webClientId': '186688039843-615dc6irc3d1b9rgus3308vf8oef3o2r.apps.googleusercontent.com',
       'offline': true
     }).then( res => {
         console.log(res);
@@ -105,6 +105,48 @@ export class LoginPage implements OnInit {
         console.error(err);
         alert("error");
       });
+  }
+
+  loginGoogle()  {
+    if (this.platform.is('cordova')) {
+        this.navigateGoogleLogin();
+    } else{
+      this.webGoogleLogin();
+    }
+  }
+  async navigateGoogleLogin(): Promise<void> {
+    try {
+      const gplusUser = await this.googlePlus.login({
+        'webClientId': '135656993579-m2ikk0flsunna8smei7ci18knpsq22u8.apps.googleusercontent.com',
+        'offline': true,
+        'scopes': 'profile email'
+      });
+      return this.afAuth.auth.signInWithCredential(
+        firebase.auth.GoogleAuthProvider.credential(gplusUser.idToken)
+      ).then((credential) => {
+        console.log('creds', credential.user);
+        alert("hola");
+        // this.updateUserData(credential.user);
+      });
+      
+    } catch(err) {
+      console.log(err);
+      alert(err);
+    }
+  }
+  async webGoogleLogin(): Promise<void> {
+    try {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      const credential = await this.afAuth.auth.signInWithPopup(provider);
+    } catch(err) {
+      console.log(err)
+    }
+  }
+  signOut() {
+    this.afAuth.auth.signOut();
+    if (this.platform.is('cordova')){
+      this.googlePlus.logout();
+    }
   }
 
   ngOnInit() {
